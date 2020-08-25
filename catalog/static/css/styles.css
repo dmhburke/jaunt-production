@@ -8,9 +8,9 @@
 
 /* KEY APP BRANDING VARIABLES */
 :root {
-  --brandColorMain: #3cc194; /* App color = Dark/background and main text // PURPLE */
-  --brandColorHighlight1: #373543; /* App color = 1st highlight color // GREEN  */
-  --brandColorHighlight2: #373543; /* App color = 2nd highlight color // YELLOW  */
+  --brandColorMain: #3cc194; /* App color = Dark/background and main text // GREEN */
+  --brandColorHighlight1: #373543; /* App color = 1st highlight color // BLUE */
+  --brandColorHighlight2: #373543; /* App color = 2nd highlight color // BLUE */
   --brandFont: 'Main_Font', cursive; /* App font style = XXXX */
   --fontSizeHeader0: 4.5  rem;
   --fontSizeHeader1: 3rem;

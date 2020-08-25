@@ -1,0 +1,21 @@
+{
+  "name": "Jersey Jaunt",
+  "short_name": "Jersey Jaunt",
+  "theme_color": "#3cc194",
+  "background_color": "#FFFFFF",
+  "display": "standalone",
+  "scope": "/",
+  "start_url": "https://jaunt.par6golf.com",
+  "icons": [
+    {
+      "src": "https://jerseyjaunt-production.s3.us-east-2.amazonaws.com/pwa-assets/logo-ship-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "https://jerseyjaunt-production.s3.us-east-2.amazonaws.com/pwa-assets/logo-ship-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+}
