@@ -1,0 +1,67 @@
+{% extends "_baseGolfApp.html" %}
+
+{% block content %}
+
+{% load static %}
+
+<form method="post">
+  {% csrf_token %}
+
+  Select Round --> {{form.report_round}}<br>
+  Select Voice --> {{form.polly_name}}
+
+  <br><br>
+  <button type=submit>Show results</button>
+
+</form>
+
+{% if round_details == None %}
+
+
+{% else %}
+
+  <br>
+  Results
+  <br>
+  {% for player in round_details %}
+  {{forloop.counter}}. {{player.player_name.name}} ({{player.player_stbl}} pts) [{{player.player_score}} strokes]<br>
+  {% endfor %}
+
+  <br>
+  CTP results
+  <br>
+  {% for hole, name in zipped_ctp %}
+      #{{hole}}. {{name}}<br>
+    {% endfor %}
+
+  <br>
+  LD results
+  <br>
+  {% for hole, name in zipped_ld %}
+      #{{hole}}. {{name}}<br>
+    {% endfor %}
+
+  <br>
+  Snakepit challenge results<br>
+  {% for tussle in tussle_results %}
+  {{forloop.counter}}. {{tussle.player_name.name}} ({{tussle.tussle_score}} pts)<br>
+  {% endfor %}
+  <br>
+
+  <!-- <div> -->
+    <div id=showMatchReportButton>Show match report</div>
+    <br>
+    <div id=matchReportContainer>
+      {{report_text | linebreaksbr}}
+    </div>
+  <!-- </div> -->
+
+  <!-- BUTTON TO GENERATE SPOKEN FILE -->
+  <a href="{% url 'matchreportsfile' %}" target="_blank">
+  <div style="width: 100px; height: 50px; background-color: black; color: white;">Play</div></a>
+
+{% endif %}
+
+
+
+{% endblock %}

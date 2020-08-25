@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<!-- ADD BROWSER TAB NAME -->
+<title>
+Jersey Jaunt |
+{% block browsertitle %}
+
+{% endblock %}
+</title>
+
+<!-- CORE DETAILS FOR TEXT AND DYNAMIC RESIZING -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- ADD HOMESCREEN ICON -->
+<link rel="apple-touch-icon"
+  sizes="192x192"
+  href="https://bayoubonanza-production.s3.us-east-2.amazonaws.com/OtherAssets/BayouIcon1.png">
+
+<!-- LINK TO CSS -->
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+<!-- ADD BROWSER ICON TO PAGE -->
+<link rel="icon" type="image/png"href="{% static 'icons/_faviconShipwreckCircle512.png'%}">
+
+<!-- ADD JQUERY -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script type="text/javascript" src="{% static 'js/jquery.js' %}"></script>
+
+</head>
+
+<body>
+  <div id="header">
+    <div class="mobileContainer" id="headerContentContainer">
+
+        <a href="{% url 'landingpage'%}"><div class="navIconContainer"><img class="navIconImage" src="{% static 'icons/landingPage.svg' %}"></div></a>
+        <a href="{% url 'fullleaderboard'%}"><div class="navIconContainer"><img class="navIconImage" id="leaderboardIcon" src="{% static 'icons/fullLeaderboard.svg' %}"></div></a>
+        <a href="{% url 'scoringpage'%}"><div class="navIconContainer"><img class="navIconImage" id="scoreIcon" src="{% static 'icons/enterScores.svg' %}"></div></a>
+        <a href="{% url 'tourdetails'%}"><div class="navIconContainer"><img class="navIconImage" src="{% static 'icons/tourDetails.svg' %}"></div></a>
+        <a href="{% url 'login'%}"><div class="navIconContainer"><img class="navIconImage" style="height: 90%; margin-top: 3px;" src="{% static 'icons/jauntLogoWhite.svg' %}"></div></a>
+
+    </div></div>
+
+
+  <div class="mobileContainer" id="bodyContentContainer">
+{% block content %}
+
+{% endblock %}
+
+    </div>
+    </body>
+    </html>
