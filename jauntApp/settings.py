@@ -155,6 +155,8 @@ STATICFILES_FINDERS = ('django.contrib.staticfiles.finders.FileSystemFinder', 'd
 AWS_DEFAULT_ACL = None
 AWS_PRELOAD_METADATA=True
 
+##== MEDIA SETTINGS
+
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'catalog/static/media')
 
@@ -162,3 +164,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'catalog/static/media')
 import dj_database_url
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
+
+
+## ENABLE SSL
+SECURE_SSL_REDIRECT = True
