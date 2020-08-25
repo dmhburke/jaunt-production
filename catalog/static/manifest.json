@@ -5,7 +5,7 @@
   "background_color": "#FFFFFF",
   "display": "standalone",
   "scope": "/",
-  "start_url": "https://jaunt.par6golf.com",
+  "start_url": "https://jaunt.par6golf.com/landing",
   "icons": [
     {
       "src": "https://jerseyjaunt-production.s3.us-east-2.amazonaws.com/pwa-assets/logo-ship-192.png",
