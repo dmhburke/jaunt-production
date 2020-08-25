@@ -8,7 +8,7 @@
 
 /* KEY APP BRANDING VARIABLES */
 :root {
-  --brandColorMain: #3cc194; /* App color = Dark/background and main text // GREEN */
+  --brandColorMain: #3cc194 ; /* App color = Dark/background and main text // GREEN */
   --brandColorHighlight1: #373543; /* App color = 1st highlight color // BLUE */
   --brandColorHighlight2: #373543; /* App color = 2nd highlight color // BLUE */
   --brandFont: 'Main_Font', cursive; /* App font style = XXXX */
@@ -30,6 +30,16 @@
   box-sizing: border-box;
   padding: 0px;
   margin: 0px;
+}
+
+body {
+  background-color: var(--brandColorMain);
+}
+
+#overallContainer {
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
 }
 
 a:link {
@@ -190,6 +200,7 @@ a:link {
 .mobileContainer {
   width: 360px;
   margin: 0 auto;
+  /* background-color: white; */
 }
 
 .bigShadow {
@@ -281,6 +292,7 @@ a:link {
 #bodyContentContainer {
   height: 450px;
   padding: 10px 0px;
+  background-color: white;
 }
 /* NOTE bodyContentContainer needs updating for media*/
 

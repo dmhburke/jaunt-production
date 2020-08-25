@@ -128,9 +128,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
+## -- START DEVELOPMENT SETTINGS - also change urls static settings
 # STATIC_URL = '/static/'
 
-# DEPLOYMENT
+## -- END DEVELOPMENT SETTINGS - also change urls static settings
+
+# -- START DEPLOYMENT SETTINGS - also change urls static settings
 from os import environ as CONFIG
 
 AWS_LOCATION = 'static'
@@ -155,6 +158,8 @@ AWS_PRELOAD_METADATA=True
 
 # ENABLE SSL
 SECURE_SSL_REDIRECT = True
+
+# -- END DEPLOYMENT SETTINGS
 
 ##== MEDIA SETTINGS
 
