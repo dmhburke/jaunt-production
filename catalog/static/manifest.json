@@ -1,7 +1,7 @@
 {
     "name": "The Jersey Jaunt",
     "short_name": "Jersey Jaunt",
-    "start_url": "jaunt.par6golf.com",
+    "start_url": "https://jaunt.par6golf.com",
     "scope": "/",
     "display": "standalone",
     "background_color": "#FFF",
